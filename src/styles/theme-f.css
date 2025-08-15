@@ -1,0 +1,41 @@
+.theme-F .photo-wrapper {
+  transform: scale(1.2);
+  opacity: 0;
+}
+.theme-F .is-active .photo-wrapper {
+  animation: zoomIn 0.8s forwards;
+}
+.theme-F .is-active .photo-element {
+  animation: subtlePan 10s infinite alternate;
+}
+.theme-F .is-exiting .photo-wrapper {
+  animation: zoomOut 0.8s forwards, subtleRot 0.2s forwards;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+@keyframes subtlePan {
+  from {
+    transform: scale(1.1) translateX(-5%) translateY(-2%);
+  }
+  to {
+    transform: scale(1.1) translateX(5%) translateY(2%);
+  }
+}

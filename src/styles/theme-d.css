@@ -1,0 +1,41 @@
+.theme-D .slide {
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 1;
+  transform-origin: center;
+}
+.theme-D .is-inactive {
+  opacity: 1;
+  transform: translateY(8%) scale(0.9);
+  /* transform: translateX(-100%) rotateZ(-45deg); */
+}
+.theme-D .is-exiting {
+  animation: slideOutToLeft 0.8s forwards;
+}
+.theme-D .photo-wrapper {
+  width: 85vw;
+  /* height: ; */
+}
+.theme-D .photo-element {
+  border: 3px solid white;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.theme-D .caption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0px;
+  text-align: center;
+  padding: 1rem;
+}
+@keyframes slideOutToLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}

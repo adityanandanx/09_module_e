@@ -1,0 +1,40 @@
+.theme-B .photo-wrapper {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+.theme-B .caption {
+  transform: translateX(-100%);
+  opacity: 1;
+}
+.theme-B .is-active .photo-wrapper {
+  animation: slideInFromLeft 0.5s forwards;
+}
+.theme-B .is-active .caption {
+  animation: slideInFromLeft 0.5s 0.4s forwards;
+}
+.theme-B .is-exiting .photo-wrapper {
+  animation: slideOutToRight 0.5s forwards;
+}
+.theme-B .is-exiting .caption {
+  animation: slideOutToRight 0.5s forwards;
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    /* opacity: 0; */
+  }
+  to {
+    transform: translateX(0);
+    /* opacity: 1; */
+  }
+}
+@keyframes slideOutToRight {
+  from {
+    transform: translateX(0);
+    /* opacity: 1; */
+  }
+  to {
+    transform: translateX(100%);
+    /* opacity: 0; */
+  }
+}

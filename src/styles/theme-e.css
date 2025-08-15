@@ -1,0 +1,57 @@
+.theme-E .slide-wrapper {
+  perspective: 500px;
+}
+.theme-E .photo-wrapper {
+  display: flex;
+  width: 80vw;
+  height: 80vh;
+}
+.theme-E .door-half {
+  width: 50%;
+  height: 100%;
+  background-size: 200% 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+.theme-E .left-half {
+  background-position: left;
+  transform-origin: left;
+}
+.theme-E .right-half {
+  background-position: right;
+  transform-origin: right;
+}
+.theme-E .is-active .left-half {
+  transform: rotateY(0deg);
+}
+.theme-E .is-active .right-half {
+  transform: rotateY(0deg);
+}
+.theme-E .is-inactive .left-half {
+  transform: rotateY(-110deg);
+}
+.theme-E .is-inactive .right-half {
+  transform: rotateY(110deg);
+}
+.theme-E .is-exiting .left-half {
+  animation: doorCloseLeft 1s forwards;
+}
+.theme-E .is-exiting .right-half {
+  animation: doorCloseRight 1s forwards;
+}
+@keyframes doorCloseLeft {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(110deg);
+  }
+}
+@keyframes doorCloseRight {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-110deg);
+  }
+}

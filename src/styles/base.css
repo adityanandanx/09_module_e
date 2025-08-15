@@ -1,0 +1,27 @@
+/* base slide styles */
+.slide {
+  pointer-events: none;
+  opacity: 0;
+}
+.slide.is-active {
+  pointer-events: auto;
+  z-index: 10;
+  opacity: 1;
+}
+.slide.is-exiting {
+  z-index: 9;
+  opacity: 1;
+}
+.photo-wrapper {
+  position: relative;
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: white;
+  color: black;
+  padding: 0.7rem 1rem;
+  border-radius: 0 1rem 0 0;
+  font-family: serif;
+}
