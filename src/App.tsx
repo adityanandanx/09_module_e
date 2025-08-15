@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import "./styles/themes.css";
+import Slide from "./components/Slide";
 
 function App() {
   const [images, setImages] = useState<{ url: string; name: string }[]>([]);
@@ -50,6 +51,9 @@ function App() {
           </button>
         </div>
       ) : null}
+      {images.map((item, i) => (
+        <Slide key={item.url + i} image={item} isActive />
+      ))}
     </div>
   );
 }
